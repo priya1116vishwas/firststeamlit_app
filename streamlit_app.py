@@ -39,12 +39,8 @@ except URLError as e:
 # write your own comment -what does the next line do? 
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
-streamlit.stop()
 
 
-
-#my_cur = my_cnx.cursor()
-#my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 
 streamlit.text("Hello from Snowflake:")
 #my_data_row = my_cur.fetchone()
@@ -61,7 +57,7 @@ if streamlit.button('Get Fruit Load List'):
      my_data_rows=get_fruit_load_list()
      streamlit.dataframe(my_data_rows)
      
-  
+streamlit.stop()
 #streamlit.dataframe(my_data_row)
 #streamlit.dataframe(my_data_rows)
 #fruit_choice1 = streamlit.text_input('What fruit would you like to add?','Jackfruit')
